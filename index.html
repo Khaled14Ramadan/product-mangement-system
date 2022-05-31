@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles shop By Khaled Ramadan</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>cruds</h2>
+            <p>product mangement system</p>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="get_total()" type="number" placeholder="price" id="price" >
+                <input onkeyup="get_total()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="get_total()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="get_total()" type="discound" placeholder="discound" id="discound">
+                <span class="total" id="totle"></span>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="categary" id="categary">
+            <button  id="supmit" >Creat</button>
+        </div>
+
+        <div class="output">
+            <input onkeyup="searchitem()" type="text" placeholder="Search by Title" id="search">
+            <div class="btnsearch">
+                <button onclick="SearchByTitle()" id="searchtitle"> by title</button>
+                <button onclick="SearchByCategray()" id="searchcategray"> by categary</button>
+            </div>
+            <!-- <BUtton style="display: none;" id="deletall">Delete All </BUtton> -->
+            <table>
+                <thead>
+                    <th>id</th>
+                    <th>title</th>
+                    <th class="hiden">price</th>
+                    <th class="hiden">taxes</th>
+                    <th class="hiden">ads</th>
+                    <th class="hiden">discound</th>
+                    <th>Total-Price</th>
+                    <th class="hiden">categary</th>
+                    <th >Count</th>
+                    <th>update</th>
+                    <th>Out_One</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
