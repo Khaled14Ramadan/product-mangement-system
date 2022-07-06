@@ -5,14 +5,15 @@
 }
 
 body {
+    --main--color : #010c9b ;
     background-color: #222;
     color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
-    margin: 20px auto;
+    margin: 10px auto;
     width: 80%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -33,7 +34,7 @@ input {
     padding: 0 5px;
     background-color: #111;
     color: white;
-    caret-color: rgb(88, 6, 240);
+    caret-color: var(--main--color);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -62,7 +63,7 @@ input:focus {
 }
 
 .price .total {
-    background-color: rgb(88, 6, 240);
+    background-color: var(--main--color);
     height: 40px;
     padding: 3px;
     display: flex;
@@ -81,7 +82,7 @@ button {
     padding: 5px;
     color: white;
     transition-duration: 0.5s;
-    background-color:rgb(44, 6, 94);
+    background-color:var(--main--color);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -126,8 +127,13 @@ table button {
     width: fit-content;
 }
 
-@media (max-width:910px) {
+@media (max-width:1020px) {
     .hiden {
         display: none;
+    }
+    .container {
+        margin: 10px auto;
+        min-width: 500px;
+        padding: 40px;
     }
 }

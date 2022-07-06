@@ -15,6 +15,7 @@ let update = document.getElementById("update");
 let delet = document.getElementsByClassName("delete");
 let output = document.querySelector(".output");
 let table = document.querySelector("table");
+let price_error = document.querySelector('.price-error'); 
 // let deletalldata = document.getElementById("deletall");
 //console.log(table);
 let mood = "create";
@@ -22,17 +23,20 @@ let temp;
 // console.log (title,price,taxes,ads,totle,count,categary,search,searchtitle,searchcategray);
 
 /*get total*/
+let result;
 function get_total(){
-    let result;
-    if(price.value !=''){
+    if(price.value !='' && price.value > 0 && taxes.value >=0 && ads.value >=0 && discound.value>=0 ){
+        price_error.style.display = "none";
         result = +price.value + +taxes.value + +ads.value - +discound.value;
         totle.innerHTML = result ;
         totle.style.background = "#4caf50";
     }
-    else {
+    else 
+    {
+        price_error.style.display = "block";
         result = 0;
         totle.innerHTML = result ;
-        totle.style.background = "#5806f0";
+        totle.style.background = "#010c9b";
     }
     
 }
@@ -55,7 +59,7 @@ supmit.onclick =  function(){
          categ : categary.value,
      }
      //count 
-     if(title.value !='' && price.value !='' && categary.value !='' && +count.value > 0)
+     if(title.value !='' && price.value !='' && result>0 && categary.value !='' && +count.value > 0)
      {
         title.style.border = "none";
         price.style.border = "none";
@@ -124,7 +128,7 @@ supmit.onclick =  function(){
     totle.innerHTML = '';
     count.value = '';
     categary.value ='';
-    totle.style.background = "#5806f0";
+    totle.style.background = "#010c9b";
  }
 
  //Read table

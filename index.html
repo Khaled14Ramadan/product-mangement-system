@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobiles shop By Khaled Ramadan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
                 <input onkeyup="get_total()" type="discound" placeholder="discound" id="discound">
                 <span class="total" id="totle"></span>
             </div>
+            <div class="price-error alert alert-danger" style="display: none;">this values aren't negative values and price is not zero</div>
             <input type="number" placeholder="count" id="count">
             <input type="text" placeholder="categary" id="categary">
             <button  id="supmit" >Creat</button>
